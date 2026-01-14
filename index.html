@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TN Rust</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
+  </head>
+
+  <body class="dark-theme adaptive">
+    <header class="index-header">
+      <div class="index-max-width">
+      <h1 class="index-header-h1">
+        <a href="./index.html" class="index-header-a adaptive">Rust</a>
+      </h1>
+      <nav id="idNav" class="index-nav adaptive">
+        <ul class="index-ul">
+          <li><a href="./home.html" class="index-header-a adaptive">Home</a></li>
+          <li><a href="./news.html" class="index-header-a adaptive">News</a></li>
+          <li><a href="./blogs.html" class="index-header-a adaptive">Blogs</a></li>
+          <li><a href="./about.html" class="index-header-a adaptive">About</a></li>
+        </ul>
+      </nav>
+
+      <nav class="index-nav-mobile adaptive">
+        <p id="openNav" class="open-button"><span onclick="OpenNav()">&#9776;</span></p>
+        <p id="closeNav" class="close-button"><span onclick="CloseNav()">&times;</span></p>
+      </nav>
+      </div>
+    </header>
+
+    <main class="index-main">
+      <article class="index-max-width">
+        <header>
+          <h2 class="dark-text adaptive"><a href="https://en.wikipedia.org/wiki/Rust_(programming_language)" class="index-header-a adaptive">Rust</a> is a general-purpose programming language. It is noted for its emphasis on performance, type safety, concurrency, and memory safety.</h2>
+          <p class="dark-text adaptive">Website: <a href="https://rust-lang.org/" target="_blank" class="index-header-a adaptive">rust-lang.org</a></p>
+          <p class="dark-text adaptive">Repository: <a href="https://github.com/rust-lang/rust" target="_blank" class="index-header-a adaptive">github.com/rust-lang/rust</a></p>
+          <p class="dark-text adaptive">Version: <a href="https://rust-lang.org/tools/install/" target="_blank" class="index-header-a adaptive">rustc-1.92.0</a></p>
+        </header>
+
+        <section>
+          <h3 class="dark-text adaptive">An introduction</h3>
+          <ol>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">An introduction to Rust</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Hello, World!</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Hello, Cargo!</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Packages and Crates</a></li>
+          </ol>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Rust fundamentals</h3>
+          <ol>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Variables and Mutability</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Data Types</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Functions</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Comments</a></li>
+            <li class="dark-text adaptive"><a href="./control-flow.html" class="index-header-a adaptive">Control Flow</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Ownership</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">References and Borrowing</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Slice Type</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Structs</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Enums</a></li>
+          </ol>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Rust advanced</h3>
+          <ol>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Common Collections</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Error Handling</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Generic Types, Traits, and Lifetimes</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Writing Automated Tests</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Functional Language Features: Iterators and Closures</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Smart Pointers</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Fearless Concurrency</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Fundamentals of Asynchronous Programming: Async, Await, Futures, and Streams</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Patterns and Matching</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Unsafe Rust</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Advanced Traits</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Advanced Types</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Advanced Functions and Closures</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Macros</a></li>
+          </ol>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Rust extended</h3>
+          <ol>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">More about Cargo and Crates.io</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Object Oriented Programming Features of Rust</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Guessing Game</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Command Line Program</a></li>
+            <li class="dark-text adaptive"><a href="#" class="index-header-a adaptive">Multithreaded Web Server</a></li>
+          </ol>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <section class="index-footer footer-gradient footer-border">
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+          <p>Powered by <a href="https://tnadvancement.tn-technology.com/" target="_blank" class="index-footer-a adaptive">TN ADVANCEMENT</a></p>
+          <p>&#169; <span id="fyear"></span> TN Rust Project. All rights reserved</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/time.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

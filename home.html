@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TN Rust</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
+  </head>
+
+  <body class="dark-theme adaptive">
+    <header class="home-header">
+      <div class="home-max-width">
+      <h1 class="home-header-h1">
+        <a href="./index.html" class="home-header-a adaptive">Rust</a>
+      </h1>
+      <nav class="home-nav">
+        <ul class="home-ul">
+          <li><a href="./home.html" class="home-header-a adaptive">Home</a></li>
+          <li><a href="./news.html" class="home-header-a adaptive">News</a></li>
+          <li><a href="./blogs.html" class="home-header-a adaptive">Blogs</a></li>
+          <li><a href="./about.html" class="home-header-a adaptive">About</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <article class="home-max-width">
+        <header>
+          <h2 class="dark-text adaptive">Rust Overview</h2>
+          <p class="dark-text adaptive">Install: curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh</p>
+        </header>
+
+        <section>
+          <h3 class="dark-text adaptive">"Hello, World!" program</h3>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("Hello, world!");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Creating a Project with Cargo</h3>
+          <p class="dark-text adaptive">cargo new hello_cargo</p>
+          <p class="dark-text adaptive">cd hello_cargo</p>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Packages and Crates</h3>
+          <h4 class="dark-text adaptive">Building a Cargo Project</h4>
+          <p class="dark-text adaptive">cargo build</p>
+          <h4 class="dark-text adaptive">Building and Running a Cargo Project</h4>
+          <p class="dark-text adaptive">cargo run</p>
+          <h4 class="dark-text adaptive">Checks a Cargo Project</h4>
+          <p class="dark-text adaptive">cargo check</p>
+          <h4 class="dark-text adaptive">Building for Release</h4>
+          <p class="dark-text adaptive">cargo build --release</p>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Variables and Mutability</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let mut x = 5;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    x = 6;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = 7;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Constants</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive home-pre-wrap">#![allow(unused)]</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Shadowing</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = 5;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = x + 1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        let x = x * 2;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("The value of x in the inner scope is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive home-pre-wrap">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let spaces = "   ";</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let spaces = spaces.len();</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Data Types</h3>
+          <h4 class="dark-text adaptive">Floating-Point Types</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">#![allow(unused)]</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = 2.0;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let y: f32 = 3.0;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Integer Types</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive home-pre-wrap">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x: i64 = 100000;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let y: i64 = 150000;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let result: i64 = x * y;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value 150K * 100K = {result}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Numeric Operations</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let sum = 5 + 10;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let difference = 95.5 - 4.3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let product = 4 * 30;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let quotient = 56.7 / 32.2;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let truncated = -5 / 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let remainder = 43 % 5;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">The Boolean Type</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let t = true;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let f: bool = false;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">The Character Type</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let c = 'z';</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let z: char = 'ℤ';</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let heart_eyed_cat = '😻';</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">The Tuple Type</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let tup: (i32, f64, u8) = (500, 6.4, 1);</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let tup = (500, 6.4, 1);</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let (x, y, z) = tup;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of y is: {y}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x: (i32, f64, u8) = (500, 6.4, 1);</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let five_hundred = x.0;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let six_point_four = x.1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let one = x.2;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">The Array Type</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a = [1, 2, 3, 4, 5];</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let months = ["January", "February", "March", "April", "May", "June", "July",
+                  "August", "September", "October", "November", "December"];</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a: [i32; 5] = [1, 2, 3, 4, 5];</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a = [3; 5];</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a = [1, 2, 3, 4, 5];</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let first = a[0];</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let second = a[1];</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Functions</h3>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("Hello, world!");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    another_function();</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn another_function() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("Another function.");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Parameters</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    another_function(5);</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn another_function(x: i32) {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    print_labeled_measurement(5, 'h');</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn print_labeled_measurement(value: i32, unit_label: char) {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The measurement is: {value}{unit_label}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Statements and Expressions</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let y = 6;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let y = {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        let x = 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        x + 1</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    };</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of y is: {y}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Functions with Return Values</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive home-pre-wrap">fn five() -> i32 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    5</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+            <br>
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = five();</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let y = {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        let x = 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        x + 1</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    };</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of y is: {y}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = plus_one(5);</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">};</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn plus_one(x: i32) -> i32 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    x + 1</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Comments</h3>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    // hello, world</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    // So we're doing something complicated here, long enough that we need</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    // multiple lines of comments to do it! Whew! Hopefully, this comment will</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    // explain what's going on.</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let lucky_number = 7; // I'm feeling lucky today</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    // I'm feeling lucky today</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let lucky_number = 7;</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Control flow</h3>
+          <h4 class="dark-text adaptive">If</h4>
+          <h4 class="dark-text adaptive">Filename: main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let number = 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    if number < 5 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    } else {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("Condition was false");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Loop</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    loop {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Returning Values from Loops</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let mut counter = 0;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let result = loop {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        counter += 1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        if counter == 10 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">            break counter * 2;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        }</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    };</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The result is {result}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">While</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let mut number = 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    while number != 0 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        number -= 1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("LIFTOFF!!!");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a = [10, 20, 30, 40, 50];</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let mut index = 0;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    while index < 5 {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("the value is: {}", a[index]);</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        index += 1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">For</h4>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let a = [10, 20, 30, 40, 50];</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    for element in a {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("the value is: {element}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    for number in (1..4).rev() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("{number}!");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("LIFTOFF!!!");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <section class="home-footer footer-gradient footer-border">
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+          <p>Powered by <a href="https://tnadvancement.tn-technology.com/" target="_blank" class="home-footer-a adaptive">TN ADVANCEMENT</a></p>
+          <p>&#169; <span id="fyear"></span> TN Rust Project. All rights reserved</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/time.js"></script>
+  </body>
+</html>

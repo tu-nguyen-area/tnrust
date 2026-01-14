@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TN Rust</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/control-flow.css">
+    <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
+  </head>
+
+  <body class="dark-theme adaptive">
+    <header class="flow-header">
+      <div class="flow-max-width">
+      <h1 class="flow-header-h1">
+        <a href="./index.html" class="flow-header-a adaptive">Rust</a>
+      </h1>
+      <nav class="flow-nav">
+        <ul class="flow-ul">
+          <li><a href="./home.html" class="flow-header-a adaptive">Home</a></li>
+          <li><a href="./news.html" class="flow-header-a adaptive">News</a></li>
+          <li><a href="./blogs.html" class="flow-header-a adaptive">Blogs</a></li>
+          <li><a href="./about.html" class="flow-header-a adaptive">About</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <main class="flow-main">
+      <article class="flow-max-width">
+        <header>
+          <h2 class="dark-text adaptive">Control flow</h2>
+          <p class="dark-text adaptive">The ability to run some code depending on whether a condition is true and to run some code repeatedly while a condition is true are basic building blocks in most programming languages. The most common constructs that let you control the flow of execution of Rust code are if expressions and loops.</p>
+        </header>
+
+        <section>
+          <h3 class="dark-text adaptive">If</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let number = 3;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    if number < 5 {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    } else {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("Condition was false");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Loop</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    loop {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Returning Values from Loops</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let mut counter = 0;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let result = loop {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        counter += 1;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        if counter == 10 {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">            break counter * 2;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        }</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    };</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    println!("The result is {result}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">While</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let mut number = 3;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    while number != 0 {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("Condition was true");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        number -= 1;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    println!("LIFTOFF!!!");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let a = [10, 20, 30, 40, 50];</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let mut index = 0;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    while index < 5 {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("the value is: {}", a[index]);</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        index += 1;</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">For</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    let a = [10, 20, 30, 40, 50];</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    for element in a {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("the value is: {element}");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="flow-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    for number in (1..4).rev() {</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">        println!("{number}!");</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive flow-pre-wrap">    println!("LIFTOFF!!!");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <section class="flow-footer footer-gradient footer-border">
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+          <p>Powered by <a href="https://tnadvancement.tn-technology.com/" target="_blank" class="flow-footer-a adaptive">TN ADVANCEMENT</a></p>
+          <p>&#169; <span id="fyear"></span> TN Rust Project. All rights reserved</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/time.js"></script>
+  </body>
+</html>
