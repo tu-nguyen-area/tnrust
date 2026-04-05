@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TN Rust</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/variable.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
+  </head>
+
+  <body class="dark-theme adaptive">
+    <header class="home-header">
+      <div class="home-max-width">
+      <h1 class="home-header-h1">
+        <a href="./index.html" class="home-header-a adaptive">Rust</a>
+      </h1>
+      <nav id="idNav" class="home-nav adaptive">
+        <ul class="home-ul">
+          <li><a href="./home.html" class="home-header-a adaptive">Home</a></li>
+          <li><a href="./news.html" class="home-header-a adaptive">News</a></li>
+          <li><a href="./blogs.html" class="home-header-a adaptive">Blogs</a></li>
+          <li><a href="./about.html" class="home-header-a adaptive">About</a></li>
+        </ul>
+      </nav>
+
+      <nav class="home-nav-mobile adaptive">
+        <p id="openNav" class="open-button"><span onclick="OpenNav()">&#9776;</span></p>
+        <p id="closeNav" class="close-button"><span onclick="CloseNav()">&times;</span></p>
+      </nav>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <article class="home-max-width">
+        <header>
+          <h2 class="dark-text adaptive">Variables and Mutability</h2>
+          <p>As mentioned in the “Storing Values with Variables” section, by default, variables are immutable.</p>
+        </header>
+
+        <section>
+          <h3 class="dark-text adaptive">Variables</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let mut x = 5;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    x = 6;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = 7;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="dark-text adaptive">Declaring constants</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive home-pre-wrap">#![allow(unused)]</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">}</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Shadowing</h3>
+          <h4 class="dark-text adaptive">Filename: src/main.rs</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">fn main() {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = 5;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    let x = x + 1;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    {</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        let x = x * 2;</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">        println!("The value of x in the inner scope is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    }</code>
+            <br>
+            <code class="dark-text adaptive home-pre-wrap">    println!("The value of x is: {x}");</code>
+            <br>
+            <code class="dark-text adaptive">}</code>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <section class="home-footer footer-gradient footer-border">
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+          <p>Powered by <a href="https://tnadvancement.com/" target="_blank" class="home-footer-a adaptive">TN ADVANCEMENT</a></p>
+          <p>&#169; <span id="fyear"></span> TN Rust Project. All rights reserved</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/time.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TN Rust</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/hello-cargo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
+  </head>
+
+  <body class="dark-theme adaptive">
+    <header class="home-header">
+      <div class="home-max-width">
+      <h1 class="home-header-h1">
+        <a href="./index.html" class="home-header-a adaptive">Rust</a>
+      </h1>
+      <nav id="idNav" class="home-nav adaptive">
+        <ul class="home-ul">
+          <li><a href="./home.html" class="home-header-a adaptive">Home</a></li>
+          <li><a href="./news.html" class="home-header-a adaptive">News</a></li>
+          <li><a href="./blogs.html" class="home-header-a adaptive">Blogs</a></li>
+          <li><a href="./about.html" class="home-header-a adaptive">About</a></li>
+        </ul>
+      </nav>
+
+      <nav class="home-nav-mobile adaptive">
+        <p id="openNav" class="open-button"><span onclick="OpenNav()">&#9776;</span></p>
+        <p id="closeNav" class="close-button"><span onclick="CloseNav()">&times;</span></p>
+      </nav>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <article class="home-max-width">
+        <header>
+          <h2 class="dark-text adaptive">Hello, Cargo!</h2>
+          <p>Cargo is Rust’s build system and package manager.</p>
+        </header>
+
+        <section>
+          <h3 class="dark-text adaptive">"Hello, Cargo!"</h3>
+          <h4 class="dark-text adaptive">Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo --version</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Creating a Project with Cargo</h3>
+          <h4>Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo new hello_cargo</code>
+            <br>
+            <code class="dark-text adaptive">cd hello_cargo</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Building a Cargo Project</h3>
+          <h4>Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo build</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Building and Running a Cargo Project</h3>
+          <h4>Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo run</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Checks a Cargo Project</h3>
+          <h4>Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo check</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Building for Release</h3>
+          <h4>Command:</h4>
+          <div class="home-border adaptive">
+            <code class="dark-text adaptive">cargo build --release</code>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <section class="home-footer footer-gradient footer-border">
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+          <p>Powered by <a href="https://tnadvancement.tn-technology.com/" target="_blank" class="home-footer-a adaptive">TN ADVANCEMENT</a></p>
+          <p>&#169; <span id="fyear"></span> TN Rust Project. All rights reserved</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="assets/js/time.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

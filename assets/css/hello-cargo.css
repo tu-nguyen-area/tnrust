@@ -74,6 +74,21 @@ code {
   justify-content: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  .home-nav.adaptive {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(10, 10, 10, 1);
+  }
+}
+
+@media (width >= 48rem) {
+  .home-nav {
+    display: flex;
+    justify-content: center;
+    position: static;
+  }
+}
+
 .home-ul {
   list-style-type: none;
   display: flex;
@@ -129,7 +144,7 @@ code {
   top: 0.25rem;
   right: 0.75rem;
   color: rgba(0, 0, 0, 1);
-  cursor:pointer
+  cursor:pointer;
 }
 
 @media (width >= 48rem) {
