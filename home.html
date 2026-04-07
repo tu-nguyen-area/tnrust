@@ -4,6 +4,7 @@
     <title>TN Rust</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href='https://fonts.googleapis.com/css?family=Geist|Geist Mono' rel='stylesheet'>
   </head>
 
@@ -13,13 +14,19 @@
       <h1 class="home-header-h1">
         <a href="./index.html" class="home-header-a adaptive">Rust</a>
       </h1>
-      <nav class="home-nav">
+
+      <nav id="idNav" class="home-nav adaptive">
         <ul class="home-ul">
           <li><a href="./home.html" class="home-header-a adaptive">Home</a></li>
           <li><a href="./news.html" class="home-header-a adaptive">News</a></li>
           <li><a href="./blogs.html" class="home-header-a adaptive">Blogs</a></li>
           <li><a href="./about.html" class="home-header-a adaptive">About</a></li>
         </ul>
+      </nav>
+
+      <nav class="home-nav-mobile adaptive">
+        <p id="openNav" class="open-button"><span onclick="OpenNav()">&#9776;</span></p>
+        <p id="closeNav" class="close-button"><span onclick="CloseNav()">&times;</span></p>
       </nav>
       </div>
     </header>
@@ -614,6 +621,7 @@
     </footer>
 
     <script src="assets/js/time.js"></script>
+    <script src="assets/js/index.js"></script>
 
   </body>
 </html>

@@ -70,14 +70,68 @@ code {
 }
 
 .home-nav {
-  display: flex;
-  justify-content: center;
+  display: none;
+  position: fixed;
+  top: 0.25rem;
+  left: 0.75rem;
+  color: rgba(0, 0, 0, 1);
+  width: 80%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-nav.adaptive {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(10, 10, 10, 1);
+  }
+}
+
+@media (width >= 48rem) {
+  .home-nav {
+    display: flex;
+    justify-content: center;
+    position: static;
+  }
+}
+
+.home-nav-mobile {
+  display: block;
+  position: fixed;
+  top: 0.25rem;
+  right: 0.75rem;
+  color: rgba(0, 0, 0, 1);
+  cursor:pointer;
+}
+
+@media (width >= 48rem) {
+  .home-nav-mobile {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-nav-mobile.adaptive {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.open-button {
+}
+
+.close-button {
+  display: none;
 }
 
 .home-ul {
   list-style-type: none;
-  display: flex;
+  display: grid;
   gap: 3rem;
+}
+
+@media (width >= 48rem) {
+  .home-ul {
+    display: flex;
+  }
 }
 
 .home-main {
@@ -98,6 +152,13 @@ code {
   display: flex;
   justify-content: center;
   line-height: 1.2;
+  font-size: 0.75rem;
+}
+
+@media (width >= 48rem) {
+  .home-footer {
+    font-size: 1rem;
+  }
 }
 
 .footer-gradient {
